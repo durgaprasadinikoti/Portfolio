@@ -611,3 +611,23 @@ body:not(.user-is-tabbing) a:focus {
         padding: var(--gutter-medium) 0;
     } 
 }
+
+
+/* Define keyframes for the animation */
+@keyframes slideIn {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  /* Apply animation to the image */
+  .animated-image {
+    width: 200px;
+    height: 200px;
+    background-image: url('your-image-url.jpg');
+    background-size: cover;
+    animation: slideIn 1s ease-in-out; /* Adjust the duration and timing function as needed */
+  }
