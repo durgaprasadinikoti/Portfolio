@@ -631,3 +631,33 @@ body:not(.user-is-tabbing) a:focus {
     background-size: cover;
     animation: slideIn 1s ease-in-out; /* Adjust the duration and timing function as needed */
   }
+
+  .animatedText {
+    animation: dance 2s infinite;
+}
+
+/* Define the keyframes for the dancing animation */
+@keyframes dance {
+    0% { transform: translateY(0); }
+    25% { transform: translateY(-10px); }
+    50% { transform: translateY(0); }
+    75% { transform: translateY(10px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes jump {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+
+li {
+    animation: jump 1s ease-in-out infinite; /* Apply jump animation */
+}
